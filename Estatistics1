@@ -1,2 +1,43 @@
 #Install pac
 
+!pip install -q -U watermark
+
+#imports
+import matplotlib.pyplot as  plt
+import numpy as np
+
+Calculando o Tempo de Crescimento de um Investimento com Logaritmo em Python
+
+Determinar o tempo necessário para que um investimento inicial cresça até um valor final específico, considerando uma taxa de crescimento contínua. 
+
+import math
+
+def calcular_tempo_crescimento(valor_inicial, valor_final, taxa_crescimento):
+  """Calcula o tempo necessário para um investimento atingir um valor final,
+  considerando uma taxa de crescimento contínua.
+
+  Args:
+    valor_inicial: Valor inicial do investimento.
+    valor_final: Valor final desejado para o investimento.
+    taxa_crescimento: Taxa de crescimento contínua (em decimal).
+
+  Returns:
+    O tempo necessário para atingir o valor final, em unidades de tempo da taxa.
+  """
+
+  if valor_final <= valor_inicial or taxa_crescimento <= 0:
+    return "Valores inválidos. O valor final deve ser maior que o inicial e a taxa de crescimento deve ser positiva."
+
+  tempo = math.log(valor_final / valor_inicial) / taxa_crescimento
+  return tempo
+
+# Obtendo os dados do usuário
+valor_inicial = float(input("Digite o valor inicial do investimento: "))
+valor_final = float(input("Digite o valor final desejado: "))
+taxa_crescimento = float(input("Digite a taxa de crescimento contínua (em decimal): "))
+
+# Calculando o tempo
+tempo = calcular_tempo_crescimento(valor_inicial, valor_final, taxa_crescimento)
+
+# Imprimindo o resultado
+print(f"O tempo necessário para o investimento atingir o valor desejado é de aproximadamente {tempo:.2f} unidades de tempo.")
