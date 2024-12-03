@@ -1,0 +1,35 @@
+          #Cross Product
+
+#Calcular o produto vetorial entre 2 vetores
+def produto_vetorial(v1,v2):
+    x = v1[1] * v2[2] - v1[2] * v2[1]
+    y = v1[2] * v2[0] - v1[0] * v2[2]
+    z = v1[0] * v2[1] - v1[1] * v2[0]
+    return [x,y,z]
+
+#Cria os vetores
+vetor_a = [2, -3, 1]
+vetor_b = [5, 7, 6]
+
+#Calculando o produto vetorial
+resultado = produto_vetorial(vetor_a,vetor_b)
+print("Produto Vetorial:", resultado)
+
+          #Dot Produt
+
+# Calculando o produto escalar
+def produto_escalar(v1,v2):
+
+# Gerando vetores
+vetor_a = [2, -3, 1]
+vetor_b = [5, 7, 6]
+
+resultado = produto_escalar(vetor_a, vetor_b)
+print("Produto escalar:", resultado)
+
+
+
+
+
+
+
