@@ -1,0 +1,9 @@
+Multiplicação de Escalar por Vetor em Dados Reais. Descrição: Dada uma série de preços de ações prices= [120, 125, 130, 128, 135], ajuste os preços em 15% e calcule o novo preço das ações.
+
+import numpy as np
+# Série de preços das ações
+prices = np.array([120, 125, 130, 128, 135])
+
+# Ajuste de 15% nos preços
+new_prices = prices * 1.15
+new_prices
