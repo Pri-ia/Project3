@@ -1,0 +1,33 @@
+Geometria de Vetores e Gráfico em Python
+
+# Define o vetor (nome que quiser, neste ex: u)
+u = np.array([-2, 3])
+
+# Exemplo 1
+
+# Cria a figura
+plt.figure(figsize = (5, 5))
+
+# Define o vetor como um objeto gráfico chamado arrow
+
+# Vetor u       #head widht é a cabeça da flexa, numero que quiser, e width é a largura da linha da flexa.
+vetor1 = plt.arrow(0, 
+                   0, 
+                   u[0], 
+                   u[1], 
+                   head_width = .3, 
+                   width = .1, 
+                   color = 'blue', 
+                   length_includes_head = True)
+
+# Ponto de início do vetor / (bolinha amarela), ko=circulo, tamanho 8
+plt.plot(0, 0, 'ko', markerfacecolor = 'yellow', markersize = 8)
+
+# Formatação do plot / grid: linha= tipo tracejada. square: eixo quadrado. axis:tamanho total do grid.savefig: salva img. no pc.
+plt.grid(linestyle = '--', linewidth = .6)
+plt.axis('square')
+plt.axis([-4, 4, -4, 4])
+plt.legend([vetor1], ['u'])
+plt.title('Vetor $\mathbf{u}$')
+plt.savefig('imagens/grafico_01.png', dpi = 300) 
+plt.show()
